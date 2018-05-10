@@ -1,0 +1,26 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "my first biog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UEDNewbie/react-myBlog.git"
+  },
+  "keywords": [
+    "cansolve"
+  ],
+  "author": "tongxiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UEDNewbie/react-myBlog/issues"
+  },
+  "homepage": "https://github.com/UEDNewbie/react-myBlog#readme",
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-router": "^4.2.0"
+  }
+}
