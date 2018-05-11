@@ -17,22 +17,8 @@
 先在对应的git先创建git仓库，比如：新闻管理后台 `demo` 项目，然后 `git clone`  到本来的开发环境，进入当前项目目录，代码如入：
 
 ```
-git clone ssh://git@git.onemt.com.cn:49226/server/demo.git
+git clone ssh://git@github.com:UEDNewbie/react-myBlog.git
 cd demo
-```
-
-或者
-
-```
-cd demo
-git remote add origin ssh://git@git.onemt.com.cn:49226/server/demo.git
-```
-
-这时，通过git来添加前端开发初始化的工程目录，代码如下：
-
-```
-git remote add base ssh://git@23.91.98.88:49226/linjie/webpack-react-bootstrap-ace.git
-git pull base master --allow-unrelated-histories
 ```
 
 目录结构如下：
