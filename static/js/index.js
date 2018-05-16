@@ -1,1 +1,2 @@
-import './controller/index'; 
+import 'babel-polyfill';
+import './controller/index';

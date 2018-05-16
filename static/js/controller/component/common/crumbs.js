@@ -1,7 +1,7 @@
 import React from 'react';
-import Fetch from '@fetch';
-import Storage from '@tools/storage';
-import { FromInput, FromSelect, FromTextArea, FromCheckBox } from '@module/formControl';
+import Fetch from '../../tools/fetch';
+import Storage from '../../../tools/storage';
+import { FromInput, FromSelect, FromTextArea, FromCheckBox } from '../../../module/formControl';
 
 class Crumbs extends React.Component {
   constructor(props) {
@@ -18,22 +18,22 @@ class Crumbs extends React.Component {
   }
   componentDidMount() {
     var _this = this;
-    (async function () {
-      let val = await Fetch({
-        url: '/api/listAllProject',
-        method: 'POST',
-        param: {
-          currentPage: '0'
-        }
-      });
-      if (val.msg.code == '0000') {
-        _this.setState({
-          projects: val.content.list
-        })
-      } else {
+    // (async function () {
+    //   let val = await Fetch({
+    //     url: '',
+    //     method: 'POST',
+    //     param: {
+    //       currentPage: '0'
+    //     }
+    //   });
+    //   if (val.msg.code == '0000') {
+    //     _this.setState({
+    //       projects: val.content.list
+    //     })
+    //   } else {
 
-      }
-    })()
+    //   }
+    // })()
   }
   sendAjax(event) {
     let val = event.target.value;

@@ -19,8 +19,8 @@ import request from 'superagent';
   -------------------------
 */
 
-import Host from '@tools/host';
-import Cookie from '@tools/cookie';
+import Host from '../tools/host';
+import Cookie from '../tools/cookie';
 
 var isDrop = false, cache;
 var element, eleArr = [], x, y, posTop, posLeft, oldIndex, newIndex, maxHeight, maxWidth, maxLen, baseWidth, baseHeigth, maxX, maxY;

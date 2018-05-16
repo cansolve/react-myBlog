@@ -1,9 +1,9 @@
 import React from 'react';
-import Dispatch from '@dispatch'
-import Fetch from '@fetch';
+import Dispatch from '../controller/dispatch'
+import Fetch from '../controller/tools/fetch';
 import _ from 'lodash';
-import { UTCToTime, TimeToUTC } from '@tools/utc';
-import { SortClass, Sorting } from '@tools/sort';
+import { UTCToTime, TimeToUTC } from '../tools/utc';
+import { SortClass, Sorting } from '../tools/sort';
 
 
 class Table extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Dispatch from '@dispatch'
+import Dispatch from '../../dispatch'
 import Common from '../common/common';
 
 

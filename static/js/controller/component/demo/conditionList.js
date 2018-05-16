@@ -1,9 +1,9 @@
 import React from 'react';
-import Dispatch from '@dispatch'
-import Dialog from '@module/dialog';
-import Fetch from '@fetch';
-import Storage from '@tools/storage';
-import { FromInput, FromSelect, FromTextArea, FromCheckBox } from '@module/formControl';
+import Dispatch from '../../dispatch'
+import Dialog from '../../../module/dialog';
+import Fetch from '../../tools/fetch';
+import Storage from '../../../tools/storage';
+import { FromInput, FromSelect, FromTextArea, FromCheckBox } from '../../../module/formControl';
 
 class ConditionList extends React.Component {
   constructor(props) {
