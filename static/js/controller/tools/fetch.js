@@ -1,6 +1,6 @@
-import Cookie from '@tools/cookie';
-import Host from '@tools/host';
-import Storage from '@tools/storage';
+import Cookie from '../../tools/cookie';
+import Host from '../../tools/host';
+import Storage from '../../tools/storage';
 
 /*配置引入*/
 import Config from '../../config';

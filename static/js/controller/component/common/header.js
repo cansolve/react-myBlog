@@ -36,7 +36,7 @@ class Header extends React.Component {
             <a href="#" className="navbar-brand">
               <small>
                 <i className="icon-leaf"></i>
-                {title}
+                测试平台
               </small>
             </a>
           </div>

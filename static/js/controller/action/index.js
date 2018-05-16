@@ -1,5 +1,5 @@
-import Fetch from '@fetch';
-import Storage from '@tools/storage';
+import Fetch from '../tools/fetch';
+import Storage from '../../tools/storage';
 
 const actions = {
     initState: () => {

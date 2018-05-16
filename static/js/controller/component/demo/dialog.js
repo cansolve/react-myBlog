@@ -1,6 +1,6 @@
 import React from 'react';
-import Dialog from '@module/dialog';
-import Dispatch from '@dispatch';
+import Dialog from '../../../module/dialog';
+import Dispatch from '../../dispatch';
 
 
 class DialogDemo extends React.Component {

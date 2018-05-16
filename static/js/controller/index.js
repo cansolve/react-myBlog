@@ -5,6 +5,7 @@ import {
     Route,
     hashHistory,
 } from 'react-router';
+import 'babel-polyfill';
 /*
 	前端界面的css样式引用
 */
@@ -20,7 +21,7 @@ import '../../css/ace-skins.min.css';
 import '../../scss/index.scss';
 
 /*cookie引入*/
-import Cookie from '@tools/cookie';
+import Cookie from '../tools/cookie';
 
 import Token from './tools/token'; //获取token
 import User from './tools/user'; //获取用户信息
@@ -50,8 +51,8 @@ async function init() {
     // 	await Tree();
     // }
 
-    render( <
-        RouterNav / > ,
+    render( 
+        <RouterNav /> ,
         document.getElementById('app')
     );
 }

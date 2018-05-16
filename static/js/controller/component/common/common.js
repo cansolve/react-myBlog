@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Gritter from '@module/gritter';
+import Gritter from '../../../module/gritter';
 
 import Header from './header';
 import Left from './left';
@@ -65,7 +65,7 @@ export default class Common extends React.Component {
                     <input type="checkbox" className="ace ace-checkbox-2" id="ace-settings-navbar"
                       checked={this.state.idActive}
                       onChange={this.changeCheckBox.bind(this)} />
-                    <label className="lbl" for="ace-settings-navbar"> Right To Left (rtl)</label>
+                    <label className="lbl" htmlFor="ace-settings-navbar"> Right To Left (rtl)</label>
                   </div>
                 </div>
               </div>
