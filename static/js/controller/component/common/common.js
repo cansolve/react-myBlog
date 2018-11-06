@@ -3,7 +3,6 @@ import React from 'react';
 import Gritter from '../../../module/gritter';
 
 import Header from './header';
-import Left from './left';
 import Crumbs from './crumbs';
 import Loading from './loading';
 
@@ -46,7 +45,6 @@ export default class Common extends React.Component {
             <a className={'menu-toggler ' + this.state.display} id="menu-toggler" href="#" onClick={this.mediaChange.bind(this)}>
               <span className="menu-text"></span>
             </a>
-            <Left display={this.state.display} {...this.props} />
             <div className="main-content">
               <Crumbs {...this.props} />
               <div className="page-content clearfix">
