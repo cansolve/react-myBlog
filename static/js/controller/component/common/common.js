@@ -54,18 +54,6 @@ export default class Common extends React.Component {
                 <div className="btn btn-app btn-xs btn-warning ace-settings-btn open" onClick={this.openSetting.bind(this)}>
                   <i className="icon-cog bigger-150"></i>
                 </div>
-
-                <div className="ace-settings-box open" style={{ 'display': this.state.sta == true ? 'inline-block' : 'none' }}>
-                  <div>
-                    <span>&nbsp; Choose Skin</span>
-                  </div>
-                  <div>
-                    <input type="checkbox" className="ace ace-checkbox-2" id="ace-settings-navbar"
-                      checked={this.state.idActive}
-                      onChange={this.changeCheckBox.bind(this)} />
-                    <label className="lbl" htmlFor="ace-settings-navbar"> Right To Left (rtl)</label>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

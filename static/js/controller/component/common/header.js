@@ -47,7 +47,7 @@ class Header extends React.Component {
                   <img className="nav-user-photo" src={user} alt="linjie's Photo" />
                   <span className="user-info">
                     <small>欢迎,</small>
-                    admin
+                    tx
                   </span>
 
                   <i className="icon-caret-down"></i>
