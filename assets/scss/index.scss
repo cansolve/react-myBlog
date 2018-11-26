@@ -1,0 +1,24 @@
+// tips样式
+.tips-btn-wrap {
+    position: relative;
+}
+
+.tips-box {
+    max-width: 1000px;
+    display: block;
+    padding: 8px;
+}
+
+.page-wrap {
+    max-width: 1000px;
+}
+
+.navbar-fixed-top+.main-container {
+    padding-top: 46px;
+}
+
+.breadcrumbs-fixed+.page-content {
+    padding-top: 49px;
+}
+
+@import './module';
