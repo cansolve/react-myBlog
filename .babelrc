@@ -1,18 +1,19 @@
 {
-	"presets" : [
-		"env",
-		"flow",
-		"react",
-		"es2015",
-		"stage-3"
-	],
- 	"plugins": [
- 		"transform-react-jsx",
- 		"transform-runtime"
- 	],
- 	"env": {
- 		"development" : {
- 			"presets" : ["react-hmre"]
- 		}
- 	}
+    "presets": [
+        "env",
+        "flow",
+        "react",
+        "es2015",
+        "stage-3"
+    ],
+    "plugins": [
+        "transform-react-jsx",
+        "transform-runtime",
+        "transform-class-properties"
+    ],
+    "env": {
+        "development": {
+            "presets": ["react-hmre"]
+        }
+    }
 }

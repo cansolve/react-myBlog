@@ -42,14 +42,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
-            },
-            {
-                test: /\.(scss|sass)$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
+                test: /\.(scss|sass|css)$/,
+                use: [{
                         loader: "style-loader" // 将 JS 字符串生成为 style 节点
                     },
                     {
@@ -96,10 +90,7 @@ module.exports = {
             filename: "index.html",
             template: path.join(__dirname, "../public/index.html")
         }),
-        new MiniCssExtractPlugin({
-            filename: "./assets/css/[name].css",
-            chunkFilename: "[id].css"
-        }),
+
         new CopyWebpackPlugin([{
             from: "./assets/images/",
             to: "./assets/images/"

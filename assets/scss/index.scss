@@ -1,24 +1,44 @@
-// tips样式
-.tips-btn-wrap {
+/*--------------------------------------------------------------
+    4.0 Header
+--------------------------------------------------------------*/
+
+.navbar {
     position: relative;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 45px 0 rgba(16, 16, 16, .1);
+    -moz-box-shadow: 0 0 45px 0 rgba(16, 16, 16, .1);
+    box-shadow: 0 0 45px 0 rgba(16, 16, 16, .1);
+    min-height: 70px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -o-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -moz-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -ms-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    padding: 0;
+    z-index: 11;
+    &.fixed {
+        background: rgba(255, 255, 255, 0.98);
+        -webkit-transition: 0.3s all ease;
+        -moz-transition: 0.3s all ease;
+        transition: 0.3s all ease;
+        position: fixed;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        top: 0;
+        -webkit-animation: fadeInDown 0.6s both;
+        -moz-animation: fadeInDown 0.6s both;
+        animation: fadeInDown 0.6s both;
+        width: 100%;
+    }
+    .container {
+        position: relative
+    }
 }
 
-.tips-box {
-    max-width: 1000px;
-    display: block;
-    padding: 8px;
-}
-
-.page-wrap {
-    max-width: 1000px;
-}
-
-.navbar-fixed-top+.main-container {
-    padding-top: 46px;
-}
-
-.breadcrumbs-fixed+.page-content {
-    padding-top: 49px;
-}
-
-@import './module';
+@import './assert/mixin';
+@import './assert/reset';
