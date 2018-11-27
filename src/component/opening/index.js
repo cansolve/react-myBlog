@@ -24,7 +24,7 @@ class Index extends React.Component {
 								</small>
             </h1>
           </div>
-          <h1>rotate</h1>
+          <h1>opening</h1>
 
         </div>
       </Common>

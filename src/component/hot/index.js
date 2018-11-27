@@ -24,10 +24,10 @@ class Index extends React.Component {
 								</small>
             </h1>
           </div>
-          <h1>video</h1>
+          <h1>hot</h1>
 
-          
         </div>
+        
       </Common>
     )
   }

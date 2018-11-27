@@ -8,12 +8,10 @@ import Store from './store';
 
 
 //
-import Home from './component/index/index';
-import Nav from './component/nav/index';
-import Swiper from './component/swiper/index';
-import Rotate from './component/rotate/index';
-import Popup from './component/popup/index';
-import Video from './component/video/index';
+import Message from './component/message/index';
+import Home from './component/home/index';
+import Opening from './component/opening/index';
+import Hot from './component/hot/index';
 /*
 	前端路由配置	
 */
@@ -28,11 +26,10 @@ class RouterNav extends React.Component {
         <HashRouter history={history()}>
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path="/nav" component={Nav} />
-            <Route path="/swiper" component={Swiper} />
-            <Route path="/rotate" component={Rotate} />
-            <Route path="/popup" component={Popup} />
-            <Route path="/video" component={Video} />
+            <Route path="/message" component={Message} />
+            <Route path="/home" component={Home} />
+            <Route path="/opening" component={Opening} />
+            <Route path="/hot" component={Hot} />
           </Switch>
         </HashRouter>
       </Provider>

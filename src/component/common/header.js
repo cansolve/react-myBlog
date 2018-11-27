@@ -20,11 +20,11 @@ class Header extends React.Component {
           <div className="icon-wrap"></div>
           <div className="menus">
             <ul className="navbar-nav">
-              <li className="menu-item"><Link to="/swiper">首页</Link></li>
-              <li className="menu-item">热门</li>
-              <li className="menu-item">生活分享</li>
-              <li className="menu-item">留言</li>
-              <li className="menu-item">开源技术</li>
+              <li className="menu-item"><Link to="/home">首页</Link></li>
+              <li className="menu-item"><Link to="/hot">热门</Link></li>
+              <li className="menu-item"><Link to="/opening">开源技术</Link></li>
+              <li className="menu-item"><Link to="/message">留言</Link></li>
+              <li className="menu-item"><Link to="/about.html">关于</Link></li>
             </ul>
           </div>
           <div className="search-wrap"></div>
