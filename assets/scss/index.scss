@@ -36,9 +36,33 @@
         width: 100%;
     }
     .container {
-        position: relative
+        position: relative;
+        width: 1170px;
+        margin: 0 auto;
+        .icon-wrap {
+            width: 200px;
+            height: 70px;
+            line-height: 70px;
+            padding: 0;
+        }
+    }
+}
+
+.navbar-nav {
+    .menu-item {
+        display: inline-block;
+        a {
+            display: block;
+            position: relative;
+            font-size: 14px;
+            line-height: 70px;
+            text-transform: uppercase;
+            padding: 0 8px;
+            margin: 0 5px;
+        }
     }
 }
 
 @import './assert/mixin';
 @import './assert/reset';
+@import './assert/iconfont';

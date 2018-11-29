@@ -61,7 +61,7 @@ module.exports = {
                 use: "raw-loader",
             },
             {
-                test: /\.(gif|png|jpg|woff|svg|ttf|eot)$/,
+                test: /\.(gif|png|jpg)$/,
                 use: [{
                     loader: 'url-loader',
                     options: {
@@ -72,13 +72,13 @@ module.exports = {
                 }]
             },
             {
-                test: /\.(woff2?|otf)$/,
+                test: /\.(woff2?|otf|woff|svg|ttf|eot)$/,
                 use: [{
                     loader: 'url-loader',
                     options: {
                         limit: 50,
-                        outputPath: './assets/font',
-                        publicPath: '../font'
+                        outputPath: './font',
+                        publicPath: './assets/font'
                     }
                 }]
             }

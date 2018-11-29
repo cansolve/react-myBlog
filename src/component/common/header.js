@@ -16,9 +16,9 @@ class Header extends React.Component {
     return (
       
       <div className="navbar">
-        <div className="container">
-          <div className="icon-wrap"></div>
-          <div className="menus">
+        <div className="container clearfix">
+          <div className="icon-wrap fl"></div>
+          <div className="menus fl">
             <ul className="navbar-nav">
               <li className="menu-item"><Link to="/home">首页</Link></li>
               <li className="menu-item"><Link to="/hot">热门</Link></li>
@@ -27,7 +27,7 @@ class Header extends React.Component {
               <li className="menu-item"><Link to="/about.html">关于</Link></li>
             </ul>
           </div>
-          <div className="search-wrap"></div>
+          <div className="search-wrap fr"></div>
         </div>
       </div>
     )
