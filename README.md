@@ -1,10 +1,9 @@
-# react-manage(更新中)
+# my-blog(更新中)
 ## 前端技术
 
 ### 本地必须要有[node](https://nodejs.org/en/download/)和[git](https://git-scm.com/)环境
 
 - webpack 4
-- bootstrap + ace
 - react 16
 - react-router 4
 - redux 3
@@ -16,31 +15,31 @@
 
 # 项目开始
 
-先在对应的git先创建git仓库，比如：XX管理后台 `demo` 项目，然后 `git clone`  到本来的开发环境，进入当前项目目录，代码如入：
+先在对应的git先创建git仓库，比如： `my-blog` 项目，然后 `git clone`  到本来的开发环境，进入当前项目目录，代码如入：
 
 ```
-git clone ssh://git@github.com:cansolve/react-manage.git
-cd demo
+git clone ssh://git@github.com:cansolve/react-myBlog.git
+cd my-blog
 ```
 
 或者
 
 ```
-cd demo
-git remote add origin ssh://git@github.com:cansolve/react-manage.git
+cd my-blog
+git remote add origin ssh://git@github.com:cansolve/react-myBlog.git
 ```
 
 这时，通过git来添加前端开发初始化的工程目录，代码如下：
 
 ```
-git remote add base ssh://git@github.com:cansolve/react-manage.git
+git remote add base ssh://git@github.com:cansolve/react-myBlog.git
 git pull base master --allow-unrelated-histories
 ```
 
 目录结构如下：
 
 ```
-demo //项目名
+my-blog //项目名
   -- dist  //预编译，自动构建之后会生成的文件，默认初始化是没有当前这个文件
   -- asserts  //静态资源目录，css,font,image
   -- public  //html模板文件
@@ -71,11 +70,11 @@ demo //项目名
 
 ```
 git add .
-git commit -m '前端项目初始化'
-git push origin demo
+git commit -m 'xxxx'
+git push origin my-blog
 ```
 
-到此，你的 `demo` 项目前端搭建和初始化已完毕，接下来你就可以开始 前端开发 了
+到此，你的 `my-blog` 项目前端搭建和初始化已完毕，接下来你就可以开始 前端开发 了
 
 ------------------------------------
 
