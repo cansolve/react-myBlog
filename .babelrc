@@ -9,7 +9,11 @@
     "plugins": [
         "transform-react-jsx",
         "transform-runtime",
-        "transform-class-properties"
+        "transform-class-properties", ["import", {
+            "libraryName": "antd",
+            "libraryDirectory": "es",
+            "style": "css"
+        }]
     ],
     "env": {
         "development": {

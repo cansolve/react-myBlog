@@ -18,7 +18,7 @@ export default class Common extends React.Component {
   }
   render() {
     return (
-      <div className={this.state.parentClass}>
+      <div className="common">
         {/*头部组建*/}
         <Header />
         <div className="page-content clearfix">

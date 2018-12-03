@@ -1,68 +1,83 @@
-/*--------------------------------------------------------------
-    4.0 Header
---------------------------------------------------------------*/
-
-.navbar {
-    position: relative;
-    background-color: #fff;
-    -webkit-box-shadow: 0 0 45px 0 rgba(16, 16, 16, .1);
-    -moz-box-shadow: 0 0 45px 0 rgba(16, 16, 16, .1);
-    box-shadow: 0 0 45px 0 rgba(16, 16, 16, .1);
-    min-height: 70px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    -o-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    -moz-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    -ms-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    padding: 0;
-    z-index: 11;
-    &.fixed {
-        background: rgba(255, 255, 255, 0.98);
-        -webkit-transition: 0.3s all ease;
-        -moz-transition: 0.3s all ease;
-        transition: 0.3s all ease;
-        position: fixed;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-        top: 0;
-        -webkit-animation: fadeInDown 0.6s both;
-        -moz-animation: fadeInDown 0.6s both;
-        animation: fadeInDown 0.6s both;
-        width: 100%;
-    }
-    .container {
-        position: relative;
-        width: 1170px;
-        margin: 0 auto;
-        .icon-wrap {
-            width: 200px;
-            height: 70px;
-            line-height: 70px;
-            padding: 0;
-        }
-    }
-}
-
-.navbar-nav {
-    .menu-item {
-        display: inline-block;
-        a {
-            display: block;
-            position: relative;
-            font-size: 14px;
-            line-height: 70px;
-            text-transform: uppercase;
-            padding: 0 8px;
-            margin: 0 5px;
-        }
-    }
-}
-
 @import './assert/mixin';
 @import './assert/reset';
 @import './assert/iconfont';
+.menu-wrap {
+    width: 750px;
+}
+
+.ant-affix {
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ant-menu-horizontal>.ant-menu-item>a {
+    line-height: 69px;
+}
+
+.head-box {
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fff;
+}
+
+.nav-wrap {
+    width: 1100px;
+    height: 70px;
+    margin: 0 auto;
+    .logo {
+        width: 120px;
+        height: 100%;
+        text-align: center;
+        line-height: 70px;
+    }
+    .fa {
+        margin-right: 6px;
+    }
+}
+
+//---------------------------home页面样式---------------------------------//
+.page-content {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.side-l {
+    max-width: 800px;
+    margin-right: 10px;
+}
+
+.side-r {
+    text-align: center;
+    width: 270px;
+    padding-top: 16px;
+    .infos {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e8e8e8;
+        .avatarer {
+            width: 100px;
+            height: 100px;
+        }
+        .name {
+            font-size: 35px;
+            display: block;
+        }
+    }
+    .about {
+        padding-top: 16px;
+        text-align: left;
+        p {
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+    }
+    .connect {
+        padding-top: 16px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e8e8e8;
+        i {
+            font-size: 20px;
+            margin: 0 8px;
+            color: #1890ff;
+        }
+    }
+}

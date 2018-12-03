@@ -21,13 +21,14 @@ class Index extends React.Component {
 								<small>
                 <i className="ace-icon fa fa-angle-double-right"></i>
                 常用组件库及代码编写规范
-								</small>
+                </small>
+                
             </h1>
           </div>
           <h1>hot</h1>
 
         </div>
-        
+
       </Common>
     )
   }
