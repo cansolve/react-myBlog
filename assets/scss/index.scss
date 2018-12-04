@@ -24,20 +24,19 @@
     width: 1100px;
     height: 70px;
     margin: 0 auto;
+    @include box();
     .logo {
         width: 120px;
         height: 100%;
         text-align: center;
         line-height: 70px;
+        margin-right: 20px;
     }
     .fa {
         margin-right: 6px;
     }
     .btns {
         line-height: 70px;
-        .login {
-            margin-right: 10px;
-        }
     }
 }
 
@@ -53,10 +52,10 @@
 }
 
 .side-r {
-    text-align: center;
     width: 250px;
     padding-top: 16px;
     .infos {
+        text-align: center;
         padding-bottom: 20px;
         border-bottom: 1px solid #e8e8e8;
         .avatarer {
@@ -73,14 +72,17 @@
         padding-top: 16px;
         text-align: left;
         p {
+            text-align: center;
             line-height: 20px;
             margin-bottom: 8px;
         }
     }
     .connect {
+        text-align: center;
         padding-top: 16px;
         padding-bottom: 20px;
         border-bottom: 1px solid #e8e8e8;
+        margin-bottom: 20px;
         i {
             font-size: 20px;
             margin: 0 8px;

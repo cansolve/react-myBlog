@@ -1,30 +1,84 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, Icon ,Affix,Button} from 'antd';
+import { Menu, Icon, Affix, Button, Modal } from 'antd';
+import Login from './login';
+import Register from './register';
+
+const SubMenu = Menu.SubMenu;
+const MenuItemGroup = Menu.ItemGroup;
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       current: 'mail',
-
+      visible: false,
+      login: false,
+      register: false
     }
   }
 
   handleClick = (e) => {
-    console.log('click ', e);
     this.setState({
       current: e.key,
     });
   }
+  // 显示登录框
+  showLoginModal = (e) => {
+    console.log('click ', e);
+    this.setState({
+      visible: false,
+      login: true
+    });
+  }
+  // 显示注册框
+  showRegisterModal = () => {
+    this.setState({
+      visible: false,
+      register: true
+    });
+  }
+  // 隐藏模态框
+  hideModal = () => {
+    this.setState({
+      visible: false,
+    });
+  }
+  // 取消
+  handleLoginCancel = () => {
+    this.setState({
+      login: false,
+    });
+  }
+  // 取消
+  handleRegisterCancel = () => {
+    this.setState({
+      register: false,
+    });
+  }
+  // 退出
+  handleLogout = (e) => {
+    this.setState({
+      current: e.key,
+    });
+    window.sessionStorage.userInfo = '';
+    this.setState({
+      visible: false
+    });
+  };
   componentDidMount() { }
   componentWillUnmount() { }
 
   render() {
+    let userInfo = '';
+    if (window.sessionStorage.userInfo) {
+      userInfo = JSON.parse(window.sessionStorage.userInfo);
+    }
     return (
       <Affix offsetTop={0} className="head-box">
         <div className="nav-wrap">
           <div className="logo fl">
-            logo
+            <img src="../../../assets/images/logo.png" alt="" />
           </div>
           <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" className="menu-wrap fl">
             <Menu.Item key="home">
@@ -43,12 +97,51 @@ class Header extends React.Component {
               <Link to="/about.html"><i className="fa fa-user-circle"></i>关于</Link>
             </Menu.Item>
           </Menu>
-          <div className="btns fr">
-            <Button type="primary" className="login"><Icon type="login" />登录</Button>
-            <Button type="danger" className="regest"><Icon type="login" />注册</Button>
+          <div>
+            {userInfo ? (
+              <Menu
+                onClick={this.handleLogout}
+                style={{ width: 220, lineHeight: '64px', display: 'inline-block' }}
+                selectedKeys={[this.state.current]}
+                mode="horizontal"
+              >
+                <SubMenu
+                  title={
+                    <span className="submenu-title-wrapper">
+                      <Icon type="user" /> {userInfo.name}
+                    </span>
+                  }
+                >
+                  <MenuItemGroup>
+                    <Menu.Item key="logout">退出</Menu.Item>
+                  </MenuItemGroup>
+                </SubMenu>
+              </Menu>
+            ) : (
+                <div className="btns">
+                  <Button
+                    type="primary"
+                    icon="login"
+                    style={{ marginRight: '15px' }}
+                    onClick={this.showLoginModal}
+                  >
+                    登 录
+										</Button>
+                  <Button
+                    type="danger"
+                    icon="logout"
+                    style={{ marginRight: '15px' }}
+                    onClick={this.showRegisterModal}
+                  >
+                    注 册
+										</Button>
+                </div>
+              )}
           </div>
         </div>
-        </Affix>
+        <Login visible={this.state.login} handleCancel={this.handleLoginCancel} />
+        <Register visible={this.state.register} handleCancel={this.handleRegisterCancel} />
+      </Affix>
     )
   }
 }

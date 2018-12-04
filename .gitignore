@@ -15,5 +15,4 @@ bundleLogin.js.map
 index.html
 /target
 dist
-
-src/main/webapp/static
+.sass-cache

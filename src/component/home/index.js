@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Dispatch from '../../dispatch';
 
 import Common from '../common/common';
-import { List, Avatar, Icon} from 'antd';
+import { List, Avatar, Icon,Card} from 'antd';
 import { stringify } from 'querystring';
 
 
@@ -80,6 +80,14 @@ class Index extends React.Component {
                 <a href="https://github.com/cansolve"><Icon type="wechat"/></a>
                 <a href="https://github.com/cansolve"><Icon type="qq"/></a>
               </div>
+              <Card
+                title="Card title"
+                style={{ width: 250 }}
+              >
+                <p>Card content</p>
+                <p>Card content</p>
+                <p>Card content</p>
+              </Card>
             </div>
           </div>
         
