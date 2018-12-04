@@ -5,7 +5,6 @@ import Dispatch from '../../dispatch';
 
 import Common from '../common/common';
 import { List, Avatar, Icon,Card} from 'antd';
-import { stringify } from 'querystring';
 
 
 class Index extends React.Component {

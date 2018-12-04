@@ -75,8 +75,7 @@ const functions = {
             ...state,
             ...action.state
         }
-    },
-
+    }
 }
 
 function reducers(state = Object.assign({}, initialState), action) {

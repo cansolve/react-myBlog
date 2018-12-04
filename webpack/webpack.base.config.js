@@ -58,15 +58,16 @@ module.exports = {
 
             {
                 test: /\.(ico)$/,
-                use: "raw-loader",
+                use: 'raw-loader'
             },
             {
                 test: /\.(gif|png|jpg)$/,
                 use: [{
-                    loader: 'url-loader',
+                    loader: 'file-loader',
                     options: {
                         limit: 30,
-                        outputPath: './assets/images/',
+                        publicPath: './assets/images/',
+                        outputPath: 'images/',
                         name: '[name].[ext]?[hash]',
                     }
                 }]
@@ -77,8 +78,8 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 50,
-                        outputPath: './font',
-                        publicPath: './assets/font'
+                        publicPath: './assets/font',
+                        outputPath: 'font/'
                     }
                 }]
             }
@@ -88,7 +89,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: "index.html",
-            template: path.join(__dirname, "../public/index.html")
+            template: path.join(__dirname, "../public/index.html"),
+            favicon: 'public/favicon.ico'
         }),
 
         new CopyWebpackPlugin([{

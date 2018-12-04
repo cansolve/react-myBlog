@@ -66,6 +66,9 @@ class Header extends React.Component {
       visible: false
     });
   };
+  linkPage=()=>{
+    window.location.href = 'http://www.cansolve.cn/about.html'
+  }
   componentDidMount() { }
   componentWillUnmount() { }
 
@@ -78,7 +81,7 @@ class Header extends React.Component {
       <Affix offsetTop={0} className="head-box">
         <div className="nav-wrap">
           <div className="logo fl">
-            <img src="../../../assets/images/logo.png" alt="" />
+            <Link to="/"><img src="../../assets/images/logo.png" alt="" /></Link>
           </div>
           <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" className="menu-wrap fl">
             <Menu.Item key="home">
@@ -94,7 +97,7 @@ class Header extends React.Component {
               <Link to="/message"><i className="fa fa-commenting"></i>留言</Link>
             </Menu.Item>
             <Menu.Item key="about">
-              <Link to="/about.html"><i className="fa fa-user-circle"></i>关于</Link>
+              <a href="javascript:;" onClick={this.linkPage}><i className="fa fa-user-circle"></i>关于</a>
             </Menu.Item>
           </Menu>
           <div>
