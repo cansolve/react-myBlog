@@ -33,6 +33,12 @@
     .fa {
         margin-right: 6px;
     }
+    .btns {
+        line-height: 70px;
+        .login {
+            margin-right: 10px;
+        }
+    }
 }
 
 //---------------------------home页面样式---------------------------------//
@@ -48,7 +54,7 @@
 
 .side-r {
     text-align: center;
-    width: 270px;
+    width: 250px;
     padding-top: 16px;
     .infos {
         padding-bottom: 20px;
@@ -56,6 +62,7 @@
         .avatarer {
             width: 100px;
             height: 100px;
+            @include border-radius(50%);
         }
         .name {
             font-size: 35px;
@@ -78,6 +85,7 @@
             font-size: 20px;
             margin: 0 8px;
             color: #1890ff;
+            cursor: pointer;
         }
     }
 }

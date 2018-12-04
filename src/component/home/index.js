@@ -1,10 +1,11 @@
 
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import Dispatch from '../../dispatch';
 
 import Common from '../common/common';
 import { List, Avatar, Icon} from 'antd';
+import { stringify } from 'querystring';
 
 
 class Index extends React.Component {
@@ -15,8 +16,9 @@ class Index extends React.Component {
 
   render() {
     const listData = [];
-    for (let i = 0; i < 23; i++) {
+    for (let i = 1; i < 50; i++) {
       listData.push({
+        id:`${i}`,
         href: 'http://ant.design',
         title: `ant design part ${i}`,
         avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
@@ -53,15 +55,16 @@ class Index extends React.Component {
                   >
                     <List.Item.Meta
                       avatar={<Avatar src={item.avatar} />}
-                      title={<a href={item.href}>{item.title}</a>}
+                      title={<Link to={"/details/"+item.id}>{item.title}</Link>}
                       description={item.description}
+                      
                     />
                     {item.content}
                   </List.Item>
                 )}
               />
             </div>
-            <div className="side-r fl">
+            <div className="side-r fr">
               <div className="infos">
                 <Avatar size={100} src="../../assets/images/user.jpg" className="avatarer"/>
                 <span className="name">cansolve</span>
@@ -72,10 +75,10 @@ class Index extends React.Component {
                 <p>分享 WEB 全栈开发等相关的技术文章，热点资源，记录成长路上的一点一滴！</p>
               </div>
               <div className="connect">
-                <Icon type="github"/>
-                <Icon type="weibo-circle"/>
-                <Icon type="wechat"/>
-                <Icon type="qq"/>
+                <a href="https://github.com/cansolve"><Icon type="github"/></a>
+                <a href="https://github.com/cansolve"><Icon type="weibo-circle"/></a>
+                <a href="https://github.com/cansolve"><Icon type="wechat"/></a>
+                <a href="https://github.com/cansolve"><Icon type="qq"/></a>
               </div>
             </div>
           </div>

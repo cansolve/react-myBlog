@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import { Menu, Icon ,Affix} from 'antd';
+import { Link } from 'react-router-dom';
+import { Menu, Icon ,Affix,Button} from 'antd';
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +26,7 @@ class Header extends React.Component {
           <div className="logo fl">
             logo
           </div>
-          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" className="menu-wrap">
+          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" className="menu-wrap fl">
             <Menu.Item key="home">
               <Link to="/home"><i className="fa fa-home"></i>首页</Link>
             </Menu.Item>
@@ -43,6 +43,10 @@ class Header extends React.Component {
               <Link to="/about.html"><i className="fa fa-user-circle"></i>关于</Link>
             </Menu.Item>
           </Menu>
+          <div className="btns fr">
+            <Button type="primary" className="login"><Icon type="login" />登录</Button>
+            <Button type="danger" className="regest"><Icon type="login" />注册</Button>
+          </div>
         </div>
         </Affix>
     )

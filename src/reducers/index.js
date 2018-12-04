@@ -1,32 +1,13 @@
 import Cache from '../tools/cache';
 
-const initParam = {
-    conditions: {},
-    orders: [],
-    pageIndex: 0,
-    isFirstLoad: true,
-    pageSize: 10
-}
+
 const initialState = {
     user: {},
     loading: false,
     count: 0,
-    param: Object.assign({}, initParam),
     dialog: '',
     gritter: {},
-    nav: [{
-            name: "组建库",
-            url: "",
-            children: [
-                { name: "全端幻灯片", url: "swiper" },
-                { name: "活动转盘抽奖", url: "rotate" },
-                { name: "视频播放控件", url: "video" },
-                { name: "导航条", url: "nav" },
-                { name: "弹窗", url: "popup" },
-            ]
-        },
-        { name: "代码规范", url: "" }
-    ],
+
 };
 
 const functions = {
