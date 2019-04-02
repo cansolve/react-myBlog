@@ -1,7 +1,6 @@
 
 #前端过滤文件
 .DS_Store
-node_modules/
 npm-debug.log
 bundleIndex.js
 bundleIndex.js.map
@@ -14,5 +13,8 @@ bundleLogin.js.map
 
 index.html
 /target
-dist
-.sass-cache
+/dist
+/.sass-cache
+
+# node
+node_modules/

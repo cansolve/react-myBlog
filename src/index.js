@@ -6,15 +6,19 @@ import {
     hashHistory,
 } from 'react-router-dom';
 import 'babel-polyfill';
+import { Provider } from 'react-redux';
+import Store from './store';
 /*
 	前端界面的css样式引用
 */
 
-import '../assets/css/index.css'
+import './assets/css/index.css'
 /*路由引入*/
 import RouterNav from './router';
 
 ReactDOM.render( 
-    <RouterNav/> , 
+    <Provider store={Store}>
+        <RouterNav />
+    </Provider>,
     document.getElementById('app')
 );

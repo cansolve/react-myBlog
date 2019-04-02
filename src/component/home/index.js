@@ -16,17 +16,19 @@ class Index extends React.Component {
     }
   }
   componentWillMount() {
-    let _this = this;
-    axios.get('https://www.easy-mock.com/mock/5c08ef131d097a1b6e07c7bb/blogs/articleLists')
-      .then(function (response) {
-        let val =response.data.data;
-        _this.setState({
-          listData : val
-        })
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    // let _this = this;
+    // let data = {"key":"841757192","id":"1147906982"};
+    // axios.post('https://api.bzqll.com/music/tencent/songList?'+data)
+    //   .then(function (response) {
+    //     console.log(response)
+    //     let val =response.data.songs;
+    //     _this.setState({
+    //       listData : val
+    //     })
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
   }
   render() {
 
